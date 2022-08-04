@@ -26,6 +26,6 @@ function getRandomHexColor() {
 function onStopClick () {
     clearTimeout(interval);
     btn.start.disabled = false;
-    btn.disabled = true;
+    btn.stop.disabled = true;
 }
 
