@@ -12,9 +12,11 @@ function getRandomHexColor() {
 
   btn.start.addEventListener('click', onStartClick);
   btn.stop.addEventListener('click', onStopClick);
+
+  let interval = null;
   
   function onStartClick () {
-   setInterval (() => {
+    interval = setInterval (() => {
         btn.body.style.backgroundColor = getRandomHexColor()
     }, 1000);
     btn.start.disabled = true;
@@ -22,7 +24,7 @@ function getRandomHexColor() {
   }
 
 function onStopClick () {
-    clearTimeout();
+    clearTimeout(interval);
     btn.start.disabled = false;
     btn.disabled = true;
 }
