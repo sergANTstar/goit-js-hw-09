@@ -50,7 +50,7 @@ const options = {
 };    
 
 
-const selectDate = flatpickr(input, options);
+let selectDate = flatpickr(input, options);
 const timer = {
     intervalId: null,
     isActive: false,
@@ -74,6 +74,7 @@ const timer = {
             }
              else { 
                 window.alert('The time is up')
+                window.location.reload()
                 clearInterval(this.intervalId);
             }
         }, 1000);
