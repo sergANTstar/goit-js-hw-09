@@ -50,7 +50,7 @@ const options = {
 };    
 
 
-let selectDate = flatpickr(input, options);
+const selectDate = flatpickr(input, options);
 const timer = {
     intervalId: null,
     isActive: false,
